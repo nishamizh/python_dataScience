@@ -22,3 +22,6 @@ def gradient_descent(x,y):
 gradient_descent(x,y)
 
 # the output shows cost =0.240000..... for n times, it means the model is converged. So we take that slope and intercept
+
+# Goal of the Linear Regression : To minimize the error
+# To find the best fit line - the line that has the lowest error from all data points
