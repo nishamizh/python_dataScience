@@ -15,6 +15,8 @@ with zipfile.ZipFile(io.BytesIO(resposne.content)) as z:
     print(csv_name)
 
     with z.open(csv_name[0]) as csv:
-        data = pd.read_csv(csv)
+        df = pd.read_csv(csv,engine="pyarrow", dtype_backend="pyarrow")
 
-print(data.head())
+print(df.shape)
+print(df.head())
+print(df.describe())
